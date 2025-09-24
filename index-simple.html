@@ -9,12 +9,29 @@
 </head>
 <body>
     <h1>My first homepage</h1>
+
+    <button id="surpriseButton">Surprise Me</button>
+    <p id="randomFact"></p>
+    <script>
+        const facts=[
+            "Aivis is from Squad 9",
+            "Jurita is from Squad ...",
+            "Inga is from Squad 7",
+            "Jekabs is from Squad ..."
+        ];
+        const button = document.querySelector('#surpriseButton');
+        const display = document.querySelector('#randomFact');
+
+        function showRandomFact(){
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            display.textContent = facts[randomIndex];
+        }
+        button.addEventListener('click', showRandomFact);
+    </script>
+
 <main>
     <section id="about">
         <h2> Inga Basikirska</h2>
-
-        <button id="surpriseButton">Surprise Me</button>
-        <p id="randomFact"></p>
 
         <div class="top-row">
             <img src="./images/inga.jpg" alt="Foto: Inga Basikirska" width="200" height="200">
@@ -35,12 +52,11 @@
 
     </section>
 
-    
+       
 <footer>
     <p>© 2025 IngaBasikirska</p>
 </footer>
 
 </main>
-<script src="script.js"></script>
 </body>
 </html>
