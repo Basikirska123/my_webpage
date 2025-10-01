@@ -7,9 +7,22 @@
     <title>My page</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+    <script>
+        alert("This is alert message!");
+    </script>
+
 <body>
     <h1>My first homepage</h1>
 
+    <button onclick="ToggleFunction()">Toggle dark mode</button>
+    <script>
+    function ToggleFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+    </script>
+    
     <button id="surpriseButton">Surprise Me</button>
     <p id="randomFact"></p>
     <script>
@@ -23,8 +36,8 @@
         const display = document.querySelector('#randomFact');
 
         function showRandomFact(){
-            const randomIndex = Math.floor(Math.random() * facts.length);
-            display.textContent = facts[randomIndex];
+            const x = Math.floor(Math.random() * facts.length);
+            display.textContent = facts[x];
         }
         button.addEventListener('click', showRandomFact);
     </script>

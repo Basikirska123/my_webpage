@@ -44,6 +44,12 @@ a:hover{
     text-decoration: underline;
 }
 
+.dark-mode {
+  background-color: red;
+  color: greenyellow;
+}
+
+
 footer {
     color: white;
     text-align: center;
